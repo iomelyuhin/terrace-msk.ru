@@ -1,0 +1,43 @@
+.footer {
+  background-color: $dark;
+  padding: 28px;
+}
+
+.container--footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+
+  @include tablets {
+    flex-direction: column-reverse;
+  }
+}
+
+.footer__socials-list {
+  @include tablets {
+    padding: 20px 0;
+    margin: 0 20px;
+  }
+}
+
+.footer__socials-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  fill: $white;
+  transition: $norm;
+  @include tablets {
+    margin: 0 20px;
+  }
+}
+
+.footer__phone.phone {
+  font-weight: $bold;
+  font-size: 33px;
+  color: $white;
+
+  @include tablets-hor {
+    font-size: 22px;
+  }
+}

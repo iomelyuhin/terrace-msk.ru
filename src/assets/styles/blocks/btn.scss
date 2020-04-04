@@ -1,0 +1,17 @@
+.btn-price__btn {
+  padding: 15px 24px;
+  font-size: 18px;
+  font-weight: $extra;
+  color: $lighter;
+  text-transform: uppercase;
+  border: 5px solid $lighter;
+  cursor: pointer;
+  transition: color $norm, background-color $norm, transform $norm;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $lighter;
+    color: $white;
+    transform: scale(1.1);
+  }
+}

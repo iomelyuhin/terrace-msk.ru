@@ -1,0 +1,19 @@
+-
+  var installList = [
+    "монтаж 100м.кв. занимает 7 рабочих дней;",
+    "для скрытого монтажа используем саморезы Spax;",
+    "для защиты от внешнего воздействия используем лак марки BASF и Tikkurila;",
+    "выбор основания под устройство террассы производится экспертом бесплатно;",
+    "окрас любым оттенком Tikkurila;",
+    "гарантия на все материалы и работы 3 года."
+  ]
+section.install#install
+  .container.container--install
+    h2.title.install_title Монтажные и демонтажные работы
+    .install__content
+      .install__image
+        +imagePng("content/mount", "install__img", "Монтаж террассной доски из лиственницы")
+      ul.install__list
+        each text in installList
+          li.text.install__item=text
+    +btnPrice("Рассчитать стоимость", "от 2 650 руб./кв.м.", "install", "button")

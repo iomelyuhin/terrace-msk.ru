@@ -1,0 +1,28 @@
+-
+  var rentList = [
+    {
+      icon: "cash",
+      text: "Стоимость аренды дешевле, чем покупка (в 3-4 раза);"
+    },
+    {
+      icon: "check",
+      text: "Материалы поступают на объект к клиенту после тщательного обслуживания"
+    },
+    {
+      icon: "pallete",
+      text: "Вариативность применения неограничена (свадьбы, корпоративы, мероприятия)"
+    },
+    {
+      icon: "clock",
+      text: "Срок аренды от одного до тридцати дней"
+    }
+  ]
+section.rent#rent
+  .container
+    h2.title.rent__title Аренда террасс в москве и области
+    ul.rent__list
+      each item in rentList
+        li.rent__item
+          +icon(item.icon, "rent__icon")
+          .text.rent__text=item.text
+    +btnPrice("Взять в аренду", "от 950 руб./кв.м. под ключ", "rent", "button")

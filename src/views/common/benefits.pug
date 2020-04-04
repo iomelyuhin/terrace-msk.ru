@@ -1,0 +1,27 @@
+-
+  var benefitsList = [
+    {
+      icon: "tree",
+      title: "только качественная лиственница",
+      desc: "Мы закупаем пиломатериал у одного проверенного поставщика и даём гарантию на лиственницу."
+    },
+    {
+      icon: "leaf",
+      title: "Экологичные отделочные материалы",
+      desc: "Нами используются только одобренные СанПин краски, лаки и пр. материалы"
+    },
+    {
+      icon: "id",
+      title: "Нанимаем только опытных сотрудников",
+      desc: "Главное условие при приёме на работу для наших монтажников - опыт работы от 5 лет."
+    }
+  ]
+aside.benefits
+  .container
+    ul.benefits__list
+      each item in benefitsList
+        li.benefits__item
+          +icon(item.icon, "benefits__icon", `Иконка ${item.icon}`)
+          .benefits__text
+            h3.benefits__title=item.title
+            .benefits__desc=item.desc

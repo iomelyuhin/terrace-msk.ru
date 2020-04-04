@@ -1,0 +1,33 @@
+.thanks {
+  height: 100vh;
+  background: url('/assets/img/content/hero-bg.jpg') no-repeat;
+  background-size: cover;
+
+}
+
+.container--thanks {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks__content {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(#fff, 0.9);
+  border-radius: 10px;
+  padding: 20px 40px;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.thanks__title {
+  color: $lighter-l;
+}
+
+.thanks__text {
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+-
+  var serviceList = [
+    {
+      image: "content/service-01",
+      title: "Обслуживание после зимы",
+      descr: "Любое дерево требует ухода. поэтому мы рекомендуем 2 раза в год делать “капитальное” обслуживание. В него входит:",
+      list: {
+        t1: "тщательная и бережная очистка от грязи;",
+        t2: "обработка восстанавливающими составами;",
+        t3: "покрытие лаком.",
+      }
+    },
+    {
+      image: "content/service-02",
+      title: "Ремонт террасс",
+      descr: "При появлении деффектов на террассе не спешите её менять, возможно, мы поможем Вам обойтись “малой кровью”.",
+      link: "tel:+78005505233",
+      linkText: "Просто позвоните нам"
+    },
+    {
+      image: "content/service-03",
+      title: "Мойка и обработка террасс",
+      descr: "Помоем Вашу террассу нежно. Обработаем специальным восстанавливающим и укрепляющим составами. Процедуру рекомендуем проводить один раз в 2 месяца."
+    }
+  ]
+section.service#service
+  .service__wrap
+    .container
+      h2.title.service__title Обслуживание террасс
+      ul.service__list
+        each item in serviceList
+          li.service__item
+            +imageJpg(item.image, "service__image", item.title)
+            .service__item-title=item.title
+            .service__desc.text=item.descr
+            if item.list
+              ul.service__listItem
+                li.service__listItem-item=item.list.t1
+                li.service__listItem-item=item.list.t2
+                li.service__listItem-item=item.list.t3
+            if item.link
+              a(href=`${item.link}`).service__link=item.linkText
+      +btnPrice("Вызвать специалиста", "от 150 руб/кв.м.", "service", "button")

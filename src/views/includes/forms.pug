@@ -1,0 +1,97 @@
+aside.forms
+  form.forms__install#installForm(
+    action="/install.php" 
+    method="POST"
+    onsubmit="ym(61596502,'reachGoal','install')"
+  )
+    input(type='hidden', name='utm_source', value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>")
+    input(type='hidden', name='utm_medium', value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>")
+    input(type='hidden', name='utm_campaign', value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>")
+    input(type='hidden', name='utm_content', value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>")
+    input(type='hidden', name='utm_term', value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>")
+    +icon("close", "forms__closeBtn")
+    h2.forms__title.title Рассчитать стоимость террассы
+    label.input-lbl
+      input(type="text" name="phone" required="required")
+      .input-title Ваш номер телефона для связи
+    label.input-lbl
+      input(type="number" name="area" required="required")
+      .input-title Площадь планируемой террассы в кв.м.?
+    label.input-lbl.input-lbl--checkbox.input-lbl--checkbox-install
+      input(type="checkbox" name="callProfi" checked).input-checkbox
+      .input-checkbox-fake
+      .input-title--checkbox Вызов специалиста(бесплатно)
+    +btnPrice("Расcчитать", "", "installForm", "submit")
+    .forms__whatsapp
+      a(href="https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте! Хочу рассчитать стоимость террассы.").forms__whatsapp-link
+        .forms__whatsapp-icon 
+          +icon("whatsapp", "forms__whatsapp-icon-pic")
+        .forms__whatsapp-text Написать в WhatsApp
+      
+
+  form.forms__service#serviceForm(
+    action="/service.php" 
+    method="POST"
+    onsubmit="ym(61596502,'reachGoal','service')"
+  )
+    input(type='hidden', name='utm_source', value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>")
+    input(type='hidden', name='utm_medium', value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>")
+    input(type='hidden', name='utm_campaign', value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>")
+    input(type='hidden', name='utm_content', value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>")
+    input(type='hidden', name='utm_term', value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>")
+    +icon("close", "forms__closeBtn")
+    h2.forms__title.title Вызвать специалиста
+    label.input-lbl
+      input(type="text" name="phone" required="required")
+      .input-title Ваш номер телефона для связи
+    label.input-lbl
+      input(type="number" name="area" required="required")
+      .input-title Площадь террассы в кв.м.?
+    .chechbox-wrap
+      label.input-lbl.input-lbl--checkbox
+        input(type="checkbox" name="repairs").input-checkbox
+        .input-checkbox-fake
+        .input-title--checkbox Ремонт
+      label.input-lbl.input-lbl--checkbox
+        input(type="checkbox" name="wash").input-checkbox
+        .input-checkbox-fake
+        .input-title--checkbox Мойка
+      label.input-lbl.input-lbl--checkbox
+        input(type="checkbox" name="winterService" checked).input-checkbox
+        .input-checkbox-fake
+        .input-title--checkbox Комплекс "После зимы"
+    +btnPrice("Вызвать", "", "serviceForm", "submit")
+    .forms__whatsapp
+      a(href="https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте! Хочу заказать обслуживание моей террассы.").forms__whatsapp-link
+        .forms__whatsapp-icon 
+          +icon("whatsapp", "forms__whatsapp-icon-pic")
+        .forms__whatsapp-text Написать в WhatsApp
+
+  form.forms__rent#rentForm(
+    action="/rent.php" 
+    method="POST"
+    onsubmit="ym(61596502,'reachGoal','rent')"
+  )
+    input(type='hidden', name='utm_source', value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>")
+    input(type='hidden', name='utm_medium', value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>")
+    input(type='hidden', name='utm_campaign', value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>")
+    input(type='hidden', name='utm_content', value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>")
+    input(type='hidden', name='utm_term', value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>")
+    +icon("close", "forms__closeBtn")
+    h2.forms__title.title Арендовать террассу
+    label.input-lbl
+      input(type="text" name="phone" required="required")
+      .input-title Ваш номер телефона для связи
+    label.input-lbl
+      input(type="number" name="area" required="required")
+      .input-title Площадь планируемой террассы в кв.м.?
+    label.input-lbl
+      input(type="number" name="days" required="required")
+      .input-title На сколько дней?
+    
+    +btnPrice("Арендовать", "", "rentForm", "submit")
+    .forms__whatsapp
+      a(href="https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте! Хочу арендовать у вас террассу.").forms__whatsapp-link
+        .forms__whatsapp-icon 
+          +icon("whatsapp", "forms__whatsapp-icon-pic")
+        .forms__whatsapp-text Написать в WhatsApp

@@ -1,0 +1,56 @@
+mixin icon(name, mod)
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="/assets/img/sprite.svg#" + name)
+
+mixin imageJpg(path, className, alt)
+	picture(class=`${className}`)
+		source(type='image/webp', srcset=`/assets/img/${path}.webp`)
+		source(type='image/jpg', srcset=`/assets/img/${path}.jpg`)
+		img(src=`/img/${path}.jpg` class=`${className}-pic` alt=`${alt}`)
+
+mixin imagePng(path, className, alt)
+	picture(class=`${className}`)
+		source(type='image/webp', srcset=`/assets/img/${path}.webp`)
+		source(type='image/png', srcset=`/assets/img/${path}.png`)
+		img(src=`/img/${path}.png` class=`${className}-pic` alt=`${alt}`)
+
+mixin phone(classname)
+	a(href="tel:+78005505233" class=`phone ${classname}`) +7 (800) 550 52-33
+
+-
+	var socialsList = [
+		{
+			name: "whatsapp",
+			link: "https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте! Интересуют террассы",
+			mobileLink: "https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте! Интересуют террассы"
+		},
+		{
+			name: "viber",
+			link: "viber://chat?number=79250906512",
+			mobileLink: "viber://add?number=79250906512"
+		},
+		{
+			name: "insta",
+			link: "#",
+			mobileLink: "#"
+		}
+	]
+
+mixin socials(className)
+	ul(class=`socials-list ${className}-list`)
+		each item in socialsList
+			li(class=`socials-item ${className}-item`)
+				a(href=`${item.link}` class=`${className}-link`)
+					+icon(item.name, `${className}-icon	`)
+
+mixin socialsMobile(className)
+	ul(class=`socials-list-mobile ${className}-list`)
+		each item in socialsList
+			li(class=`socials-item ${className}-item`)
+				a(href=`${item.mobileLink}` class=`${className}-link`)
+					+icon(item.name, `${className}-icon	`)
+
+mixin btnPrice(text, price, formName, type)
+	.btn-price(class=`btn-price--${formName}`)
+		.btn-price__price(class=`btn-price__price--${formName}`)=price
+		button(id=`${formName}Btn` type=`${type}` class=`btn-price__btn btn-price__btn--${formName}`)=text

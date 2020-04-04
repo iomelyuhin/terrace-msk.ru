@@ -1,0 +1,16 @@
+header.header
+  .container.container--header
+    a.header__logo-link(href="#")
+      +imagePng("content/logo", "header__logo", "Террассы в Москве и МО")
+    .header__navigation
+      include ./navigation.pug
+    .hamb-btn
+      button.hamburger.hamburger--collapse(type='button')
+        span.hamburger-box
+          span.hamburger-inner
+
+    .header__contacts
+      .header__phone
+        +phone("header__phone-link")
+      .header__socials
+        +socials("header__socials")

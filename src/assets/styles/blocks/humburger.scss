@@ -1,0 +1,21 @@
+.hamb-btn {
+  display: none;
+
+  &.active {
+    @include tablets {
+      display: block;
+      position: fixed;
+      bottom: 23Px;
+      right: 20Px;
+      // display: flex;
+      // align-items: center;
+      // height: 100%;
+    }
+    
+    @include phones {
+      bottom: 25Px;
+      right: 21Px;
+
+    }
+  }
+}
