@@ -105,13 +105,13 @@ document.addEventListener(`DOMContentLoaded`, function() {
 
     buttonsArr.forEach(item => {
       item.addEventListener("click", e => {
-        console.log("!!");
         
         let id = e.target.id;
         let body = document.querySelector("body");
 
         formArea.classList.add("active");
         body.style.overflow = "hidden";
+        body.style.right = "12px";
 
         switch (id) {
           case "installBtn":
@@ -138,6 +138,7 @@ document.addEventListener(`DOMContentLoaded`, function() {
           serviceForm.classList.remove("active");
           rentForm.classList.remove("active");
           body.style.overflow = "unset";
+          body.style.right = "unset";
           formArea.classList.remove("active");
         });
       });
@@ -150,6 +151,7 @@ document.addEventListener(`DOMContentLoaded`, function() {
           disinfForm.classList.remove("active");
           serviceForm.classList.remove("active");
           rentForm.classList.remove("active");
+          body.style.right = "unset";
           body.style.overflow = "unset";
           formArea.classList.remove("active");
         }
