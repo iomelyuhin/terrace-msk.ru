@@ -1,30 +1,30 @@
-.install {
-  margin-top: 20px;
-  padding-bottom: 100px;
-  background-color: $dark;
+.disinf {
+  margin-bottom: 100px;
 }
 
-.install_title {
-  color: $lighter;
+.disinf_title {
+  color: $lighter-l;
 }
 
-.install__content {
+.disinf__content {
   display: flex;
   justify-content: center;
   width: 100%;
   flex-shrink: 0;
 }
 
-.install__image {
-  width: 40%;
+.disinf__image {
+  // width: 40%;
   display: flex;
   justify-content: flex-end;
+  border-radius: 50% 0 0 50%;
+  overflow: hidden;
   @include phones {
     display: none;
   }
 }
 
-.install__list {
+.disinf__list {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -34,11 +34,11 @@
   }
 }
 
-.install__item {
+.disinf__item {
   margin-bottom: 20px;
   margin-left: 40px;
   position: relative;
-  color: $light-grey;
+  color: $grey;
 
   &::before {
     content: "";
@@ -52,7 +52,7 @@
   }
 }
 
-.btn-price--install {
+.btn-price--disinf {
   margin-top: 20px;
-  color: $light-grey;
+  color: $dark;
 }

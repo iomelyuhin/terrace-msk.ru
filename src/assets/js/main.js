@@ -52,50 +52,52 @@ document.addEventListener(`DOMContentLoaded`, function() {
     socials.classList.toggle(`hamb`);
   });
 
-  function anchorLink() {
-    const links = document.querySelectorAll(`[href^='#']`);
-    const V = 0.2; // scrolling speed
+  // function anchorLink() {
+  //   const links = document.querySelectorAll(`[href^='#']`);
+  //   const V = 0.2; // scrolling speed
 
-    for (const iter of links) {
-      iter.addEventListener(`click`, e => {
-        e.preventDefault();
+  //   for (const iter of links) {
+  //     iter.addEventListener(`click`, e => {
+  //       e.preventDefault();
 
-        const anchor = document.querySelector(iter.getAttribute(`href`));
-        const coordAnchor = anchor.getBoundingClientRect().top;
-        const windowY = window.pageYOffset;
+  //       const anchor = document.querySelector(iter.getAttribute(`href`));
+  //       const coordAnchor = anchor.getBoundingClientRect().top;
+  //       const windowY = window.pageYOffset;
 
-        let start = null;
+  //       let start = null;
 
-        requestAnimationFrame(step);
+  //       requestAnimationFrame(step);
 
-        function step(time) {
-          if (start === null) {
-            start = time;
-          }
-          const progress = time - start;
+  //       function step(time) {
+  //         if (start === null) {
+  //           start = time;
+  //         }
+  //         const progress = time - start;
 
-          const coordY =
-            coordAnchor < 0
-              ? Math.max(windowY - progress / V, windowY + coordAnchor)
-              : Math.min(windowY + progress / V, windowY + coordAnchor);
+  //         const coordY =
+  //           coordAnchor < 0
+  //             ? Math.max(windowY - progress / V, windowY + coordAnchor)
+  //             : Math.min(windowY + progress / V, windowY + coordAnchor);
 
-          window.scrollTo(0, coordY);
-          if (coordY !== windowY + coordAnchor) {
-            requestAnimationFrame(step);
-          }
-        }
-      });
-    }
-  }
-  anchorLink();
+  //         window.scrollTo(0, coordY);
+  //         if (coordY !== windowY + coordAnchor) {
+  //           requestAnimationFrame(step);
+  //         }
+  //       }
+  //     });
+  //   }
+  // }
+  // anchorLink();
 
   function showForm() {
     const installBtn = document.querySelector("#installBtn");
+    const disinfBtn = document.querySelector("#disinfBtn");
     const serviceBtn = document.querySelector("#serviceBtn");
     const rentBtn = document.querySelector("#rentBtn");
-    const buttonsArr = [installBtn, serviceBtn, rentBtn];
+    const buttonsArr = [installBtn, disinfBtn, serviceBtn, rentBtn];
 
     const installForm = document.querySelector("#installForm");
+    const disinfForm = document.querySelector("#disinfForm");
     const serviceForm = document.querySelector("#serviceForm");
     const rentForm = document.querySelector("#rentForm");
     const formArea = document.querySelector(".forms");
@@ -103,6 +105,8 @@ document.addEventListener(`DOMContentLoaded`, function() {
 
     buttonsArr.forEach(item => {
       item.addEventListener("click", e => {
+        console.log("!!");
+        
         let id = e.target.id;
         let body = document.querySelector("body");
 
@@ -112,6 +116,9 @@ document.addEventListener(`DOMContentLoaded`, function() {
         switch (id) {
           case "installBtn":
             installForm.classList.add("active");
+            break;
+          case "disinfBtn":
+            disinfForm.classList.add("active");
             break;
           case "serviceBtn":
             serviceForm.classList.add("active");
@@ -127,6 +134,7 @@ document.addEventListener(`DOMContentLoaded`, function() {
           let body = document.querySelector("body");
 
           installForm.classList.remove("active");
+          disinfForm.classList.remove("active");
           serviceForm.classList.remove("active");
           rentForm.classList.remove("active");
           body.style.overflow = "unset";
@@ -139,6 +147,7 @@ document.addEventListener(`DOMContentLoaded`, function() {
           let body = document.querySelector("body");
 
           installForm.classList.remove("active");
+          disinfForm.classList.remove("active");
           serviceForm.classList.remove("active");
           rentForm.classList.remove("active");
           body.style.overflow = "unset";

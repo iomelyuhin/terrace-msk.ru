@@ -1,0 +1,16 @@
+-
+  var disinfList = [
+    "мойка террассы под давлением;",
+    "обработка дезинфицирующим составом;",
+    "парообработка поверхностей.",
+  ]
+section.disinf#disinf
+  .container.container--disinf
+    h2.title.disinf_title Профессиональная дезинфекция вашей террассы
+    .disinf__content
+      .disinf__image
+        +imagePng("content/disinf", "disinf__img", "Дезинфекция террассы")
+      ul.disinf__list
+        each text in disinfList
+          li.text.disinf__item=text
+    +btnPrice("Дезинфицировать", "от 2 650 руб./кв.м.", "disinf", "button")

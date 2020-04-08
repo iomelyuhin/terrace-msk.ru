@@ -13,6 +13,7 @@ node_modules/
 reports/
 php/
 yandex/
+design/
 
 # Папка с собранными файлами проекта
 # build/

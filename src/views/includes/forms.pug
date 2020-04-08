@@ -27,10 +27,35 @@ aside.forms
         .forms__whatsapp-icon 
           +icon("whatsapp", "forms__whatsapp-icon-pic")
         .forms__whatsapp-text Написать в WhatsApp
+
+  form.forms__disinf#disinfForm(
+    action="/disinfsubmit.php" 
+    method="POST"
+    onsubmit="ym(61596502,'reachGoal','disinf')"
+  )
+    input(type='hidden', name='utm_source', value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>")
+    input(type='hidden', name='utm_medium', value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>")
+    input(type='hidden', name='utm_campaign', value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>")
+    input(type='hidden', name='utm_content', value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>")
+    input(type='hidden', name='utm_term', value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>")
+    +icon("close", "forms__closeBtn")
+    h2.forms__title.title Заказать дезинфекцию
+    label.input-lbl
+      input(type="text" name="phone" required="required")
+      .input-title Ваш номер телефона для связи
+    label.input-lbl
+      input(type="number" name="area" required="required")
+      .input-title Площадь планируемой террассы в кв.м.?
+    +btnPrice("Заказать", "", "disinfForm", "submit")
+    .forms__whatsapp
+      a(href="https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте! Хочу продизинфицировать террассу.").forms__whatsapp-link
+        .forms__whatsapp-icon 
+          +icon("whatsapp", "forms__whatsapp-icon-pic")
+        .forms__whatsapp-text Написать в WhatsApp
       
 
   form.forms__service#serviceForm(
-    action="/service.php" 
+    action="/servicesubmit.php" 
     method="POST"
     onsubmit="ym(61596502,'reachGoal','service')"
   )
@@ -68,7 +93,7 @@ aside.forms
         .forms__whatsapp-text Написать в WhatsApp
 
   form.forms__rent#rentForm(
-    action="/rent.php" 
+    action="/rentsubmit.php" 
     method="POST"
     onsubmit="ym(61596502,'reachGoal','rent')"
   )

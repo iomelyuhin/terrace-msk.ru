@@ -28,19 +28,19 @@ mixin phone(classname)
 			name: "viber",
 			link: "viber://chat?number=79250906512",
 			mobileLink: "viber://add?number=79250906512"
-		},
-		{
-			name: "insta",
-			link: "#",
-			mobileLink: "#"
 		}
+		//- {
+		//- 	name: "insta",
+		//- 	link: "#",
+		//- 	mobileLink: "#"
+		//- }
 	]
 
 mixin socials(className)
 	ul(class=`socials-list ${className}-list`)
 		each item in socialsList
 			li(class=`socials-item ${className}-item`)
-				a(href=`${item.link}` class=`${className}-link`)
+				a(href=`${item.link}` class=`${className}-link` target="_blank")
 					+icon(item.name, `${className}-icon	`)
 
 mixin socialsMobile(className)

@@ -2,7 +2,26 @@
   height: 100vh;
   background: url("/assets/img/content/service-bg.jpg") no-repeat;
   background-size: cover;
+  
+}
 
+.hero-rent {
+  height: 100vh;
+  background: url("/assets/img/content/hero-rent-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+}
+.hero-disinf {
+  height: 100vh;
+  background: url("/assets/img/content/hero-disinf-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+}
+.hero-service {
+  height: 100vh;
+  background: url("/assets/img/content/hero-service-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
 }
 
 .container--hero {

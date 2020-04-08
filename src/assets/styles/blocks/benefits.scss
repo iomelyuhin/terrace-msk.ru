@@ -1,6 +1,6 @@
 .benefits__list {
   display: flex;
-  margin-top: 15px;
+  margin: 15px 0;
 
   @include tablets {
     flex-wrap: wrap;
