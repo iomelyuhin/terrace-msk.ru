@@ -13,7 +13,7 @@ module.exports = function pug2html() {
     .pipe(pugLinter({ reporter: 'default' }))
     .pipe(pug())
     .pipe(htmlValidator())
-    .pipe(bemValidator())
+    // .pipe(bemValidator())
     .pipe(replace('&gt;', ">"))
     .pipe(replace('&lt;', "<"))
     .pipe(rename(function (path) {

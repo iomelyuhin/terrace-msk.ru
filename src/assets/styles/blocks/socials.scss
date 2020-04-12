@@ -1,5 +1,6 @@
 .socials-list {
   display: flex;
+  
   @include tablets {
     display: none;
   }

@@ -14,7 +14,16 @@
   }
 }
 
+.footer__logo {
+  @include tablets {
+    margin-top: 10px;
+  }
+}
+
 .footer__socials-list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   @include tablets {
     padding: 20px 0;
     margin: 0 20px;

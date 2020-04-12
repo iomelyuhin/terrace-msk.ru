@@ -1,0 +1,112 @@
+#slides-rent{
+  position: relative;
+  height: 300px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  @include tablets {
+    height: 200px;
+  }
+}
+.slide-rent{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+}
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+.controls-rent{
+  display: none;
+}
+
+.slide-rent{
+  font-size: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+  background-size: cover;
+}
+
+/* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
+.slide-rent:nth-of-type(1){
+  background-image: url('/assets/img/content/slider-rent-01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
+.slide-rent:nth-of-type(2){
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/assets/img/content/slider-rent-02.jpg');
+}
+
+/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
+.slide-rent:nth-of-type(3){
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/assets/img/content/slider-rent-03.jpg');
+}
+/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
+.slide-rent:nth-of-type(4){
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/assets/img/content/slider-rent-04.jpg');
+}
+
+.controls-rent{
+  background: $dark;
+  // color: #fff;
+  border: none;
+  padding: 7px 0px;
+  // font-size: 20px;
+  cursor: pointer;
+  // border: 2px solid #fff;
+  // margin: 10px 0px 0px 10px;
+  width: 30px;
+  transition: $norm;
+}
+
+.controls-rent:hover,
+.controls-rent:focus{
+  background: $grey;
+  color: $dark;
+}
+
+.container--slider-rent{
+  position: relative;
+}
+
+.buttons-rent{
+  position: absolute;
+  left: -30px;
+  bottom: 0px;
+  z-index: 5;
+  font-size: 0px;
+  display: flex;
+  flex-direction: column;
+
+  @include phones {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    opacity: 0.8;
+  }
+}
+
+.slider__arr-left,
+.slider__arr-right {
+  width: 15px;
+  height: 15px;
+  fill: $white;
+}

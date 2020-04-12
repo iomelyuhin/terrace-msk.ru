@@ -1,31 +1,27 @@
 .hero {
-  height: 100vh;
-  background: url("/assets/img/content/service-bg.jpg") no-repeat;
+  height: 90vh;
+  background: url("/assets/img/content/hero-install.jpg") no-repeat;
   background-size: cover;
+  background-position-y: center;
   
 }
 
 .hero-rent {
-  height: 100vh;
+  height: 90vh;
   background: url("/assets/img/content/hero-rent-bg.jpg") no-repeat;
   background-size: cover;
   background-position-y: bottom;
 }
-.hero-disinf {
-  height: 100vh;
-  background: url("/assets/img/content/hero-disinf-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position-y: bottom;
-}
+
 .hero-service {
-  height: 100vh;
-  background: url("/assets/img/content/hero-service-bg.jpg") no-repeat;
+  height: 90vh;
+  background: url("/assets/img/content/service-hero.jpg") no-repeat;
   background-size: cover;
   background-position-y: bottom;
 }
 
 .container--hero {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,33 +32,87 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-top: 77px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  @include phones {
+    align-items: center;
+  }
 }
 
 .hero__title {
   font-family: "Trebuchet MS";
   color: $white;
   text-transform: uppercase;
+  font-size: 45px;
+  margin: 0;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 60px;
   @include desktop {
     font-size: 40px;
   }
   @include tablets-hor {
     font-size: 30px;
   }
+  @include phones {
+    text-align: center;
+  }
   & span {
     background-color: rgba($dark, 0.85);
   }
 }
 
+.hero__desc-title {
+  align-self: start;
+  font-weight: $bold;
+}
+
 .hero__desc {
-  display: block;
-  font-size: 18px;
-  text-align: center;
-  width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // font-size: 18px;
+  // text-align: center;
+  max-width: 500px;
+  padding: 10px 10px;
+  font-size: 14px;
   margin: 0;
-  font-weight: normal;
+  // font-weight: normal;
   color: $white;
   background-color: rgba($dark, 0.85);
   
+}
+
+.hero__item {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+button#hero__btnCtaBtn,
+button#service__btnCtaBtn,
+button#rentBtn {
+  margin-top: 20px;
+  color: $white;
+  background: $lighter;
+}
+
+.hero__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 40px;
+  @include phones {
+    // left: 90%;
+    display: none;
+    // bottom: 20px;
+  }
+}
+
+.hero__arrow {
+  fill: $white;
 }

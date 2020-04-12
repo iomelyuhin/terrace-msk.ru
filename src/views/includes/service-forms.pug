@@ -1,0 +1,70 @@
+aside.forms
+  form.forms__service-hero#serviceHeroForm(
+    action="/consult.php" 
+    method="POST"
+    onsubmit="ym(61596502,'reachGoal','service-hero')"
+  )
+    input(type='hidden', name='utm_source', value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>")
+    input(type='hidden', name='utm_medium', value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>")
+    input(type='hidden', name='utm_campaign', value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>")
+    input(type='hidden', name='utm_content', value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>")
+    input(type='hidden', name='utm_term', value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>")
+    input(type='hidden', name='target', value="Сервис - главный экран")
+    +icon("close", "forms__closeBtn")
+    h2.forms__title.title заполните поля ниже
+    .forms__desc и мы Вам перезвоним и ответим на любые Ваши вопросы
+    label.input-lbl
+      input(type="text" name="name" required="required")
+      span.input-title Ваше имя*
+    label.input-lbl
+      input(type="text" name="phone" required="required")
+      span.input-title Ваш номер телефона*
+    label.input-lbl
+      input(type="number" name="area")
+      span.input-title Площадь террасы в кв.м.?
+    //- label.input-lbl.input-lbl--checkbox.input-lbl--checkbox-service-hero
+    //-   input(type="checkbox" name="callProfi" checked).input-checkbox
+    //-   span.input-checkbox-fake
+    //-   span.input-title--checkbox Вызов специалиста(бесплатно)
+    +btnPrice("Отправить", "", "service-heroForm", "submit")
+    .forms__whatsapp
+      a(href="https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте!%20Хочу%20рассчитать%20стоимость%20террасы.").forms__whatsapp-link
+        .forms__whatsapp-icon 
+          +icon("whatsapp", "forms__whatsapp-icon-pic")
+        .forms__whatsapp-text Написать в WhatsApp
+
+  form.forms__ourService#ourServiceForm(
+    action="/consult.php" 
+    method="POST"
+    onsubmit="ym(61596502,'reachGoal','service-ourService')"
+  )
+    input(type='hidden', name='utm_source', value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>")
+    input(type='hidden', name='utm_medium', value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>")
+    input(type='hidden', name='utm_campaign', value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>")
+    input(type='hidden', name='utm_content', value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>")
+    input(type='hidden', name='utm_term', value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>")
+    input(type='hidden', name='target', value="Аренда - восстановление террасы")
+    +icon("close", "forms__closeBtn")
+    h2.forms__title.title заполните поля ниже
+    .forms__desc и мы Вам перезвоним и ответим на любые Ваши вопросы
+    label.input-lbl
+      input(type="text" name="name" required="required")
+      span.input-title Ваше имя*
+    label.input-lbl
+      input(type="text" name="phone" required="required")
+      span.input-title Ваш номер телефона*
+    label.input-lbl
+      input(type="number" name="area")
+      span.input-title Площадь террасы в кв.м.?
+    //- label.input-lbl.input-lbl--checkbox.input-lbl--checkbox-ourService-hero
+    //-   input(type="checkbox" name="callProfi" checked).input-checkbox
+    //-   span.input-checkbox-fake
+    //-   span.input-title--checkbox Вызов специалиста(бесплатно)
+    +btnPrice("Отправить", "", "ourService-heroForm", "submit")
+    .forms__whatsapp
+      a(href="https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте!%20Хочу%20рассчитать%20стоимость%20террасы.").forms__whatsapp-link
+        .forms__whatsapp-icon 
+          +icon("whatsapp", "forms__whatsapp-icon-pic")
+        .forms__whatsapp-text Написать в WhatsApp
+
+  

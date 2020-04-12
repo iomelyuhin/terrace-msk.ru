@@ -1,5 +1,17 @@
 document.addEventListener(`DOMContentLoaded`, function() {
   // Аналог $(document).ready(function(){
+  const windowHeight = window.innerHeight;
+  const heroSection = document.querySelector("#hero");
+  const heroArrow = document.querySelector(".hero__arrow");
+  console.log(windowHeight);
+  
+
+  if (windowHeight <= 650) {
+
+    heroSection.style.height = 100 + "vh";
+    heroArrow.style.left = 70 + "%";
+    
+  }
 
   // scroll Event
   window.addEventListener(`scroll`, function() {
@@ -89,75 +101,75 @@ document.addEventListener(`DOMContentLoaded`, function() {
   // }
   // anchorLink();
 
-  function showForm() {
-    const installBtn = document.querySelector("#installBtn");
-    const disinfBtn = document.querySelector("#disinfBtn");
-    const serviceBtn = document.querySelector("#serviceBtn");
-    const rentBtn = document.querySelector("#rentBtn");
-    const buttonsArr = [installBtn, disinfBtn, serviceBtn, rentBtn];
+  // function showForm() {
+  //   const installBtn = document.querySelector("#installBtn");
+  //   const disinfBtn = document.querySelector("#disinfBtn");
+  //   const serviceBtn = document.querySelector("#serviceBtn");
+  //   const rentBtn = document.querySelector("#rentBtn");
+  //   const buttonsArr = [installBtn, disinfBtn, serviceBtn, rentBtn];
 
-    const installForm = document.querySelector("#installForm");
-    const disinfForm = document.querySelector("#disinfForm");
-    const serviceForm = document.querySelector("#serviceForm");
-    const rentForm = document.querySelector("#rentForm");
-    const formArea = document.querySelector(".forms");
-    const closeFormBtn = document.querySelectorAll(".forms__closeBtn");
+  //   const installForm = document.querySelector("#installForm");
+  //   const disinfForm = document.querySelector("#disinfForm");
+  //   const serviceForm = document.querySelector("#serviceForm");
+  //   const rentForm = document.querySelector("#rentForm");
+  //   const formArea = document.querySelector(".forms");
+  //   const closeFormBtn = document.querySelectorAll(".forms__closeBtn");
 
-    buttonsArr.forEach(item => {
-      item.addEventListener("click", e => {
+  //   buttonsArr.forEach(item => {
+  //     item.addEventListener("click", e => {
         
-        let id = e.target.id;
-        let body = document.querySelector("body");
+  //       let id = e.target.id;
+  //       let body = document.querySelector("body");
 
-        formArea.classList.add("active");
-        body.style.overflow = "hidden";
-        body.style.right = "12px";
+  //       formArea.classList.add("active");
+  //       body.style.overflow = "hidden";
+  //       body.style.right = "12px";
 
-        switch (id) {
-          case "installBtn":
-            installForm.classList.add("active");
-            break;
-          case "disinfBtn":
-            disinfForm.classList.add("active");
-            break;
-          case "serviceBtn":
-            serviceForm.classList.add("active");
-            break;
-          case "rentBtn":
-            rentForm.classList.add("active");
-            break;
-        }
-      });
+  //       switch (id) {
+  //         case "installBtn":
+  //           installForm.classList.add("active");
+  //           break;
+  //         case "disinfBtn":
+  //           disinfForm.classList.add("active");
+  //           break;
+  //         case "serviceBtn":
+  //           serviceForm.classList.add("active");
+  //           break;
+  //         case "rentBtn":
+  //           rentForm.classList.add("active");
+  //           break;
+  //       }
+  //     });
 
-      closeFormBtn.forEach(item => {
-        item.addEventListener("click", function() {
-          let body = document.querySelector("body");
+  //     closeFormBtn.forEach(item => {
+  //       item.addEventListener("click", function() {
+  //         let body = document.querySelector("body");
 
-          installForm.classList.remove("active");
-          disinfForm.classList.remove("active");
-          serviceForm.classList.remove("active");
-          rentForm.classList.remove("active");
-          body.style.overflow = "unset";
-          body.style.right = "unset";
-          formArea.classList.remove("active");
-        });
-      });
+  //         installForm.classList.remove("active");
+  //         disinfForm.classList.remove("active");
+  //         serviceForm.classList.remove("active");
+  //         rentForm.classList.remove("active");
+  //         body.style.overflow = "unset";
+  //         body.style.right = "unset";
+  //         formArea.classList.remove("active");
+  //       });
+  //     });
 
-      formArea.addEventListener("click", function(e) {
-        if (e.target.classList.value == "forms active") {
-          let body = document.querySelector("body");
+  //     formArea.addEventListener("click", function(e) {
+  //       if (e.target.classList.value == "forms active") {
+  //         let body = document.querySelector("body");
 
-          installForm.classList.remove("active");
-          disinfForm.classList.remove("active");
-          serviceForm.classList.remove("active");
-          rentForm.classList.remove("active");
-          body.style.right = "unset";
-          body.style.overflow = "unset";
-          formArea.classList.remove("active");
-        }
-      });
-    });
-  }
+  //         installForm.classList.remove("active");
+  //         disinfForm.classList.remove("active");
+  //         serviceForm.classList.remove("active");
+  //         rentForm.classList.remove("active");
+  //         body.style.right = "unset";
+  //         body.style.overflow = "unset";
+  //         formArea.classList.remove("active");
+  //       }
+  //     });
+  //   });
+  // }
 
-  showForm();
+  // showForm();
 });

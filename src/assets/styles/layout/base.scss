@@ -45,7 +45,7 @@ button {
 }
 
 section {
-  padding-top: 100px;
+  padding: 50px 0;
        
   &:first-child {
     padding: 0;
@@ -74,6 +74,10 @@ section {
   line-height: 49px;
   text-align: center;
   text-transform: uppercase;
+  @include phones {
+    font-size: 30px;
+    line-height: 1.5;
+  }
 }
 
 .text {
@@ -92,4 +96,19 @@ section {
   font-size: 18px;
   font-weight: $bold;
   margin-bottom: 10px;
+}
+
+.list-item {
+  position: relative;
+  padding-left: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 50%;
+    background: #f4752c;
+    left: 10px;
+    top: 5px;
+  }
 }

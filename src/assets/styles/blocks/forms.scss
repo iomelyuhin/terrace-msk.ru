@@ -35,6 +35,9 @@ form {
   max-width: 400px;
   min-width: 400px;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   // pointer-events: none;
 
   @include phones {
@@ -59,10 +62,16 @@ form {
   color: $lighter-l;
 }
 
+.forms__desc {
+  text-align: center;
+  width: 80%;
+}
+
 .input-lbl {
   position: relative;
   margin-top: 30px;
   cursor: text;
+  width: 100%;
 }
 input {
   width: 100%;
@@ -156,9 +165,14 @@ input:valid ~ .input-title {
 }
 
 .forms__rent,
+.forms__install-hero,
 .forms__service,
+.forms__service-hero,
+.forms__full,
+.forms__rent-hero,
 .forms__disinf,
-.forms__install {
+.forms__install,
+.forms__ourService {
   bottom: -200%;
   transition: bottom $norm;
 

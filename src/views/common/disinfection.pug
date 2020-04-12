@@ -1,15 +1,15 @@
 -
   var disinfList = [
-    "мойка террассы под давлением;",
+    "мойка террасы под давлением;",
     "обработка дезинфицирующим составом;",
     "парообработка поверхностей.",
   ]
 section.disinf#disinf
   .container.container--disinf
-    h2.title.disinf_title Профессиональная дезинфекция вашей террассы
+    h2.title.disinf_title Профессиональная дезинфекция вашей террасы
     .disinf__content
       .disinf__image
-        +imagePng("content/disinf", "disinf__img", "Дезинфекция террассы")
+        +imagePng("content/disinf", "disinf__img", "Дезинфекция террасы")
       ul.disinf__list
         each text in disinfList
           li.text.disinf__item=text

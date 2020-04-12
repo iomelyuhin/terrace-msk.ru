@@ -5,10 +5,17 @@ block variables
 
 block content
   include ../common/hero-rent
-  include ../common/benefits
-  include ../common/rent
-  include ../common/install
-  include ../common/disinfection
-  include ../common/service
+  include ../common/rent-service
+  //- include ../common/benefits
+  //- include ../common/rent
+  //- include ../common/install
+  //- include ../common/disinfection
+  //- include ../common/service
+  .how-we-work-service
+    include ../common/how-we-work
+  .feedback-service
+    include ../common/feedback
   include ../common/footer
-  include ../includes/forms
+  include ../includes/rent-forms
+block scripts
+  script(src="/assets/js/rent.min.js")

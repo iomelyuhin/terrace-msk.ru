@@ -1,0 +1,78 @@
+.our-service {
+  padding: 0;
+}
+.container--our-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-service__description {
+  font-size: 18px;
+}
+
+.our-service__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  @include phones {
+    flex-direction: column-reverse;
+
+  }
+}
+
+.our-service__title {
+  color: $lighter-l;
+}
+
+.our-service__desc {
+  width: 45%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+
+  &::before {
+    content: "арсенал";
+    position: absolute;
+    top: -80px;
+    left: -50px;
+    font-size: 100px;
+    color: #ebebeb47;
+    z-index: -1;
+    font-weight: $extra;
+    text-transform: uppercase;
+  }
+  @include phones {
+    width: 100%;
+  }
+
+}
+
+.our-service__text {
+  width: 80%;
+  text-align: center;
+  @include phones {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.our-service__slider {
+  width: 50%;
+  @include phones {
+    width: 100%;
+  }
+
+}
+
+.our-service__item {
+  margin-top: 15px;
+}
+
+#our-serviceBtn {
+  margin-top: 20px;
+}

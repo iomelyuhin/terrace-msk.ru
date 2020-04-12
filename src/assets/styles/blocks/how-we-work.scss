@@ -1,0 +1,149 @@
+.container--how-we-work {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-we-work__title {
+  color: $lighter-l;
+}
+
+.how-we-work__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 768px;
+}
+
+.how-we-work__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+
+.how-we-work__item {
+  position: relative;
+  width: 30%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  
+  @include phones {
+    flex-direction: column;
+    width: 70%;
+    padding: 30px 0;
+  }
+}
+.how-we-work__list--second {
+  margin-top: 30px;
+  flex-direction: row-reverse;
+  @include phones {
+    margin-top: unset;
+    flex-direction: column;
+  }
+
+  .how-we-work__item-icon-img {
+    left: -18%;
+    transform: rotate(180deg) translateY(50%);
+    @include phones {
+      left: unset;
+      right: 50%;
+      top: unset;
+      bottom: -25px;
+      transform: translate(50%, -50%) rotate(90deg);
+    }
+  }
+
+  .how-we-work__item:last-child {
+    .how-we-work__item-icon-img {
+      transform: rotate(40deg);
+      right: 17%;
+      top: 100%;
+      left: unset;
+      @include phones {
+        right: 50%;
+        top: unset;
+        bottom: -25px;
+        transform: translate(50%, -50%) rotate(90deg);
+      }
+    }
+
+  }
+}
+
+.how-we-work__list--third {
+  width: 50%;
+
+  @include phones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .how-we-work__item {
+    width: 50%;
+    @include phones {
+      width: 70%;
+    }
+  }
+}
+
+.how-we-work__list--first {
+  .how-we-work__item:last-child {
+    .how-we-work__item-icon-img {
+      right: 50%;
+      top: 100%;
+      transform: rotate(90deg) translate(-50%, -50%);
+    }
+  }
+}
+
+.how-we-work__item-icon-img {
+  position: absolute;
+  fill: $lighter;
+  width: 25px;
+  height: 25px;
+  right: -8%;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  @include phones {
+    right: 50%;
+    top: unset;
+    bottom: -25px;
+    transform: translate(50%, -50%) rotate(90deg);
+  }
+}
+
+.how-we-work__item-text {
+  text-align: center;
+  width: 80%;
+  @include phones {
+    width: 100%;
+  }
+}
+
+
+// service section dark
+
+.how-we-work-service {
+  .container--how-we-work {
+    padding-bottom: 40px;
+  }
+  .how-we-work {
+    margin-top: 50px;
+    background-color: $dark;
+    color: $light-grey;
+  }
+
+  .how-we-work__title {
+    color: $lighter;
+  }
+
+}

@@ -1,0 +1,22 @@
+section.feedback
+  .container
+    h2.title.feedback__title Заполните форму обратной связи, в дневное время мы Вам перезвоним
+    form.feedback#feedback(
+      action="/feedback.php" 
+      method="POST"
+      onsubmit="ym(61596502,'reachGoal','feedback')"
+    )
+      input(type='hidden', name='utm_source', value="<?php $utm_source = $_GET['utm_source']; echo $utm_source; ?>")
+      input(type='hidden', name='utm_medium', value="<?php $utm_medium = $_GET['utm_medium']; echo $utm_medium; ?>")
+      input(type='hidden', name='utm_campaign', value="<?php $utm_campaign = $_GET['utm_campaign']; echo $utm_campaign; ?>")
+      input(type='hidden', name='utm_content', value="<?php $utm_content = $_GET['utm_content']; echo $utm_content; ?>")
+      input(type='hidden', name='utm_term', value="<?php $utm_term = $_GET['utm_term']; echo $utm_term; ?>")
+      .labels-wrap
+        label.input-lbl
+          input(type="text" name="name" required="required")
+          span.input-title Ваше Имя
+        label.input-lbl
+          input(type="text" name="phone" required="required")
+          span.input-title Ваш номер телефона
+      +btnPrice("Отправить", "", "feedback", "submit")
+    

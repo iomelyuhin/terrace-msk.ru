@@ -1,0 +1,59 @@
+.relax {
+  padding: 0;
+}
+
+.relax__content {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+
+  @include phones {
+    flex-direction: column-reverse;
+
+  }
+}
+
+.relax__title {
+  color: $lighter-l;
+}
+
+.relax__desc {
+  width: 50%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: "Комфорт";
+    position: absolute;
+    top: -80px;
+    left: -50px;
+    font-size: 100px;
+    color: #ebebeb47;
+    z-index: -1;
+    font-weight: $extra;
+    text-transform: uppercase;
+  }
+  @include phones {
+    width: 100%;
+  }
+
+}
+
+.relax__text {
+  width: 80%;
+  text-align: center;
+  @include phones {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.relax__slider {
+  width: 50%;
+  @include phones {
+    width: 100%;
+  }
+
+}

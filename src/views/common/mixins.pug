@@ -15,19 +15,21 @@ mixin imagePng(path, className, alt)
 		img(src=`/img/${path}.png` class=`${className}-pic` alt=`${alt}`)
 
 mixin phone(classname)
-	a(href="tel:+78005505233" class=`phone ${classname}`) +7 (800) 550 52-33
+	a(href="tel:+78005505233" class=`phone ${classname}` onclick="ym(61596502,'reachGoal','phoneClick')") +7 (800) 550 52-33
 
 -
 	var socialsList = [
 		{
 			name: "whatsapp",
-			link: "https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте!%20Интересуют%20террассы",
-			mobileLink: "https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте!%20Интересуют%20террассы"
+			link: "https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте!%20Интересуют%20террасы",
+			mobileLink: "https://api.whatsapp.com/send?phone=+79250906512&text=Здравствуйте!%20Интересуют%20террасы",
+			goal: "ym(61596502,'reachGoal','whatsAppClick')"
 		},
 		{
 			name: "viber",
 			link: "viber://chat?number=79250906512",
-			mobileLink: "viber://add?number=79250906512"
+			mobileLink: "viber://add?number=79250906512",
+			goal: "ym(61596502,'reachGoal','viberClick')"
 		}
 		//- {
 		//- 	name: "insta",
@@ -40,17 +42,20 @@ mixin socials(className)
 	ul(class=`socials-list ${className}-list`)
 		each item in socialsList
 			li(class=`socials-item ${className}-item`)
-				a(href=`${item.link}` class=`${className}-link` target="_blank")
+				a(href=`${item.link}` class=`${className}-link` target="_blank"  onclick=`${item.goal}`)
 					+icon(item.name, `${className}-icon	`)
 
 mixin socialsMobile(className)
 	ul(class=`socials-list-mobile ${className}-list`)
 		each item in socialsList
 			li(class=`socials-item ${className}-item`)
-				a(href=`${item.mobileLink}` class=`${className}-link`)
+				a(href=`${item.mobileLink}` class=`${className}-link` onclick=`${item.goal}`)
 					+icon(item.name, `${className}-icon	`)
 
 mixin btnPrice(text, price, formName, type)
 	.btn-price(class=`btn-price--${formName}`)
 		.btn-price__price(class=`btn-price__price--${formName}`)=price
-		button(id=`${formName}Btn` type=`${type}` class=`btn-price__btn btn-price__btn--${formName}`)=text
+		button(id=`${formName}Btn` type=`${type}` class=`btn-price__btn btn-price__btn--${formName}`  onclick="ym(61596502,'reachGoal','openForm')")=text
+
+mixin btn(text, formName, type)
+	button(id=`${formName}Btn` type=`${type}` class=`btn-price__btn btn-price__btn--${formName}`  onclick="ym(61596502,'reachGoal','openForm')")=text

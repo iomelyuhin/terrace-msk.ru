@@ -1,0 +1,80 @@
+.rent-service {
+  padding: 0;
+  padding-bottom: 50px;
+}
+.container--rent-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rent-service__description {
+  font-size: 18px;
+}
+
+.rent-service__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  @include phones {
+    flex-direction: column-reverse;
+
+  }
+}
+
+.rent-service__title {
+  color: $lighter-l;
+}
+
+.rent-service__desc {
+  width: 45%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -50px;
+    font-size: 100px;
+    color: #ebebeb47;
+    z-index: -1;
+    font-weight: $extra;
+    text-transform: uppercase;
+  }
+  @include phones {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+}
+
+.rent-service__text {
+  width: 80%;
+  text-align: center;
+  @include phones {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.rent-service__slider {
+  width: 50%;
+  @include phones {
+    width: 100%;
+  }
+
+}
+
+.rent-service__item {
+  margin-top: 15px;
+}
+
+#rent-serviceBtn {
+  margin-top: 20px;
+}
