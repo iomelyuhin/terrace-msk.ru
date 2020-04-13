@@ -3,7 +3,7 @@ document.addEventListener(`DOMContentLoaded`, function() {
   const windowHeight = window.innerHeight;
   const heroSection = document.querySelector("#hero");
   const heroArrow = document.querySelector(".hero__arrow");
-  console.log(windowHeight);
+  // console.log(windowHeight);
   
 
   if (windowHeight <= 650) {

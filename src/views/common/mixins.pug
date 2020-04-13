@@ -55,7 +55,7 @@ mixin socialsMobile(className)
 mixin btnPrice(text, price, formName, type)
 	.btn-price(class=`btn-price--${formName}`)
 		.btn-price__price(class=`btn-price__price--${formName}`)=price
-		button(id=`${formName}Btn` type=`${type}` class=`btn-price__btn btn-price__btn--${formName}`  onclick="ym(61596502,'reachGoal','openForm')")=text
+		button(id=`${formName}Btn` type=`${type}` class=`btn-price__btn btn-price__btn--${formName}`)=text
 
 mixin btn(text, formName, type)
 	button(id=`${formName}Btn` type=`${type}` class=`btn-price__btn btn-price__btn--${formName}`  onclick="ym(61596502,'reachGoal','openForm')")=text

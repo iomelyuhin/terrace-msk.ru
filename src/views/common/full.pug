@@ -17,4 +17,6 @@ section.full#full
         ul.full__list
           each text in fullList
             li.text.full__item=text
-      +btnPrice("Консультация", "от 2 650 руб./кв.м.", "full", "button")
+      .btn-price(class=`btn-price--full`)
+        .btn-price__price(class=`btn-price__price--full`) от 2 650 руб./кв.м
+        +btn("Консультация", "full", "button")

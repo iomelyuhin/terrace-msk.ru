@@ -7,8 +7,8 @@ const sourcemaps = require('gulp-sourcemaps')
 
 module.exports = function script() {
   return gulp.src('src/assets/js/*.js')
-    .pipe(eslint())
-    .pipe(eslint.format())
+    // .pipe(eslint())
+    // .pipe(eslint.format())
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['@babel/env']
